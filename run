@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+
+    use Iroms\Slogin\Authorization;
+
+    require __DIR__ . '/vendor/autoload.php';
+
+    $AuthorizationAD     = new Authorization('AD');
+    $AuthorizationOpenID = new Authorization('openID');
+    $AuthorizationLocal  = new Authorization('local');
+
+    $login    = 'admin';
+    $password = '12345';
+
+    echo $AuthorizationAD->autorizeUser($login, $password);
+    echo "\n";
+    echo $AuthorizationOpenID->autorizeUser($login, $password);
+    echo "\n";
+    echo $AuthorizationLocal->autorizeUser($login, $password);
+    echo "\n";
