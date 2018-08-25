@@ -35,22 +35,22 @@ final class AutorizationTest extends TestCase
 
         $this->assertEquals(
             $permissions,
-            $AuthorizationAD->autorizeUser($login, $password)
+            $AuthorizationAD->authorizeUser($login, $password)
         );
         
         $this->assertEquals(
             0,
-            $AuthorizationAD->autorizeUser($login, $password . ' ')
+            $AuthorizationAD->authorizeUser($login, $password . ' ')
         );
         
         $this->assertEquals(
             0,
-            $AuthorizationAD->autorizeUser($login, '')
+            $AuthorizationAD->authorizeUser($login, '')
         );
         
         $this->assertEquals(
             0,
-            $AuthorizationAD->autorizeUser($login . ' ', $password)
+            $AuthorizationAD->authorizeUser($login . ' ', $password)
         );
     }
 
@@ -68,22 +68,22 @@ final class AutorizationTest extends TestCase
 
         $this->assertEquals(
             $permissions,
-            $AuthorizationAD->autorizeUser($login, $password)
+            $AuthorizationAD->authorizeUser($login, $password)
         );
         
         $this->assertEquals(
             0,
-            $AuthorizationAD->autorizeUser($login, $password . ' ')
+            $AuthorizationAD->authorizeUser($login, $password . ' ')
         );
         
         $this->assertEquals(
             0,
-            $AuthorizationAD->autorizeUser($login, '')
+            $AuthorizationAD->authorizeUser($login, '')
         );
         
         $this->assertEquals(
             0,
-            $AuthorizationAD->autorizeUser($login . ' ', $password)
+            $AuthorizationAD->authorizeUser($login . ' ', $password)
         );
 
     }
@@ -102,22 +102,22 @@ final class AutorizationTest extends TestCase
 
         $this->assertEquals(
             $permissions,
-            $AuthorizationAD->autorizeUser($login, $password)
+            $AuthorizationAD->authorizeUser($login, $password)
         );
         
         $this->assertEquals(
             0,
-            $AuthorizationAD->autorizeUser($login, $password . ' ')
+            $AuthorizationAD->authorizeUser($login, $password . ' ')
         );
         
         $this->assertEquals(
             0,
-            $AuthorizationAD->autorizeUser($login, '')
+            $AuthorizationAD->authorizeUser($login, '')
         );
         
         $this->assertEquals(
             0,
-            $AuthorizationAD->autorizeUser($login . ' ', $password)
+            $AuthorizationAD->authorizeUser($login . ' ', $password)
         );
     }
     

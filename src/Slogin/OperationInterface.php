@@ -11,5 +11,5 @@ namespace Iroms\Slogin;
 
 interface OperationInterface
 {
-    public function autorizeUser(string $login, string $password);
+    public function authorizeUser(string $login, string $password);
 }

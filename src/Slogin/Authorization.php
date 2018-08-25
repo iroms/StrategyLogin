@@ -26,18 +26,19 @@ class Authorization
 
     private function getStrategy(string $type): OperationInterface
     {
+        $type = strtolower($type);
         switch ($type)
         {
-            case 'AD'     : return new RequestAD;
-            case 'openID' : return new RequestOpenID;
+            case 'ad'     : return new RequestAD;
+            case 'openid' : return new RequestOpenID;
             case 'local'  : return new RequestLocal;
             default       : throw new \Exception('unknown autorize method');
         }
     }
 
-    public function autorizeUser(string $login, string $password)
+    public function authorizeUser(string $login, string $password)
     {
-        return $this->strategy->autorizeUser($login, $password);
+        return $this->strategy->authorizeUser($login, $password);
     }
 
 }

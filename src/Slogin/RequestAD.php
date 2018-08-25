@@ -13,9 +13,11 @@ namespace Iroms\Slogin;
 class RequestAD implements OperationInterface
 {
 
-    public function autorizeUser(string $login, string $password)
+    public function authorizeUser(string $login, string $password)
     {
 
+        $login = strtolower($login);
+    
         $ValidUsersDB = new ValidUsersDB();
         $validUsers = $ValidUsersDB->validUsersAD;
 
